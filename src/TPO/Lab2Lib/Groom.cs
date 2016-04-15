@@ -13,8 +13,9 @@ namespace Lab2Lib
     {
         private Bride _bride;
 
-        public Groom(string name, int age) : base(name, age)
+        public Groom(string name, int age, int mood, Bride bride = null) : base(name, age, mood)
         {
+            Bride = bride;
         }
 
         public Bride Bride

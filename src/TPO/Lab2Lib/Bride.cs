@@ -7,7 +7,7 @@
 
     public class Bride : Person, IBride
     {
-        public Bride(string name, int age) : base(name, age)
+        public Bride(string name, int age, int mood) : base(name, age, mood)
         {
         }
 

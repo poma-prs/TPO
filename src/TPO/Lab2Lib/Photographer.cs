@@ -1,10 +1,11 @@
-﻿using System.Text;
+﻿using System.Linq;
+using System.Text;
 
 namespace Lab2Lib
 {
     public interface IPhotographer
     {
-        void TakePhoto();
+        void TakePhoto(params Person[] persons);
         byte[] GetPhoto(int moneyInRub);
     }
 
@@ -12,13 +13,14 @@ namespace Lab2Lib
     {
         private byte[] _photo = null;
 
-        public Photographer(string name, int age) : base(name, age)
+        public Photographer(string name, int age, int mood) : base(name, age, mood)
         {
         }
 
-        public void TakePhoto()
+        public void TakePhoto(params Person[] persons)
         {
-            _photo = Encoding.UTF8.GetBytes("This is super-duper photo.");
+            var photoTitle = persons.Aggregate("This is super-duper photo with ", (a, b) => $"{a}, {b.Name}");
+            _photo = Encoding.UTF8.GetBytes(photoTitle);
         }
 
         public byte[] GetPhoto(int moneyInRub)
