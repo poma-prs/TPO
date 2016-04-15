@@ -15,6 +15,7 @@ namespace Lab2Lib
         public IList<Groom> Grooms { get; } = new List<Groom>();
         public IList<Bride> Brides { get; } = new List<Bride>();
         public IList<Contract> Contracts { get; } = new List<Contract>();
+        public IList<Photographer> Photographers { get; } = new List<Photographer>();
 
         public void AddContract(Contract contract)
         {

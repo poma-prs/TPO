@@ -21,10 +21,12 @@ namespace Tests
             Assert.AreNotEqual(Office.Brides, null);
             Assert.AreNotEqual(Office.Grooms, null);
             Assert.AreNotEqual(Office.Contracts, null);
+            Assert.AreNotEqual(Office.Photographers, null);
 
             Assert.AreEqual(Office.Brides.Count, 0);
             Assert.AreEqual(Office.Grooms.Count, 0);
             Assert.AreEqual(Office.Contracts.Count, 0);
+            Assert.AreEqual(Office.Photographers.Count, 0);
         }
 
         [Test]
